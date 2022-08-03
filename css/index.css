@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+}
+.logo{
+    padding: 10px;
+    display: flex;
+    align-self: center;
+}
+.logo-text{
+    text-align: center;
+}
+.logo-text a{
+    text-decoration: none;
+    color: #28282B;
+}
+.unstyled{
+    list-style: none;
+}
+.menu-social-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 5px;
+}
+.menu-item{
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 1px;
+}
+.social-item{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin: 5px;
+}
+.menu-list a{
+    text-decoration: none;
+    color: #28282B;
+    font-size: large;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.social ul{
+    display: flex;
+    flex-direction: row;
+}
+.social-icon{
+    width: 20px;
+    height: 20px;
+    color: #28282B;
+    overflow: visible;
+}
+.social-button{
+    display: flex;
+    vertical-align: middle;
+    padding-top: 12px;
+    margin-left: 5px;
+}
+.social-button a{
+    text-decoration: none;
+    color: #28282B;
+}
+.social-item-link{
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+
+.body-navigation{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    border-style: dashed;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
