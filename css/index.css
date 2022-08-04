@@ -3,37 +3,44 @@
     padding: 0;
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
-.header{
+
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.container{
+
+.container-exp {
     display: flex;
     flex-direction: column;
     align-self: stretch;
 }
-.logo{
+
+.logo {
     padding: 10px;
     display: flex;
     align-self: center;
 }
-.logo-text{
+
+.logo-text {
     text-align: center;
 }
-.logo-text a{
+
+.logo-text a {
     text-decoration: none;
     color: #28282B;
 }
-.unstyled{
+
+.unstyled {
     list-style: none;
 }
-.menu-social-group{
+
+.menu-social-group {
     display: flex;
     flex-direction: column;
 }
 
-.menu-list{
+.menu-list {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -41,61 +48,291 @@
     padding: 15px;
     margin: 5px;
 }
-.menu-item{
+
+.menu-item {
     margin-right: 5px;
     margin-left: 5px;
-    padding: 1px;
+    padding: 5px;
+    align-self: stretch;
 }
-.social-item{
+
+.menu-item a{
+    display: block;
+	position: relative;
+	padding: 0.2em 0;
+}
+
+
+/* Fade in */
+.menu-item a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: #8d62ab;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+}
+
+.menu-item a:hover::after,
+.menu-item a:focus::after {
+	opacity: 1;
+	transform: translate3d(0, 0.2em, 0);
+}
+
+/* Slide in */
+.menu-item a {
+	overflow: hidden;
+}
+
+.menu-item a::after {
+	opacity: 1;
+	transform: translate3d(-100%, 0, 0);
+}
+
+.menu-item a:hover::after,
+.menu-item a:focus::after{
+	transform: translate3d(0, 0, 0);
+}
+
+.menu-item a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+.menu-item a:hover::after,
+.menu-item a:focus::after {
+    transform: scale(1);
+}
+
+.social-item {
     display: flex;
     align-items: center;
     vertical-align: middle;
     margin: 5px;
 }
-.menu-list a{
+
+.menu-list a {
     text-decoration: none;
     color: #28282B;
     font-size: large;
 }
-.social{
+
+.social {
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
 }
-.social ul{
+
+.social ul {
     display: flex;
     flex-direction: row;
 }
-.social-icon{
+
+.social-icon {
     width: 20px;
     height: 20px;
     color: #28282B;
     overflow: visible;
 }
-.social-button{
+
+.social-button {
     display: flex;
     vertical-align: middle;
     padding-top: 12px;
     margin-left: 5px;
 }
-.social-button a{
+
+.social-button a {
     text-decoration: none;
     color: #28282B;
 }
-.social-item-link{
+
+.social-item-link {
     display: inline-block;
     align-items: center;
     text-align: center;
 }
 
-.body-navigation{
+.body-navigation {
     display: flex;
     flex-direction: column;
 }
-.content{
-    border-style: dashed;
+
+.content {
     margin-top: 2%;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+/*Timeline section*/
+
+body {
+    margin-bottom: 25px !important;
+}
+
+.Yearly-timeline {
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+.Yearly-timeline:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.Yearly-timeline .timeline {
+    width: calc(50% + 17px);
+    padding: 0 30px 30px 0;
+    float: left;
+    position: relative;
+}
+
+.Yearly-timeline .timeline:before,
+.Yearly-timeline .timeline:after {
+    content: '';
+    height: 60px;
+    width: 2px;
+    border-left: 2px solid #70d6ff;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+
+.Yearly-timeline .timeline:after {
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    border: 6px solid #70d6ff;
+    border-radius: 50%;
+    right: 0;
+}
+
+.Yearly-timeline .timeline-content {
+    color: #555;
+    background: #70d6ff;
+    text-align: center;
+    min-height: 170px;
+    padding: 30px 35px 35px;
+    border-radius: 15px 15px 0 15px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.Yearly-timeline .timeline-content:before {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    left: 17px;
+    right: 17px;
+    top: 17px;
+    bottom: 17px;
+    z-index: -1;
+}
+
+.Yearly-timeline .timeline-content:hover {
+    text-decoration: none;
+}
+
+.Yearly-timeline .timeline-icon {
+    color: #777;
+    font-size: x-large;
+}
+
+.Yearly-timeline .title {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+}
+
+.Yearly-timeline .description {
+    color: #777;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.Yearly-timeline .timeline:nth-child(even) {
+    padding: 0 0 30px 30px;
+    float: right;
+}
+
+.Yearly-timeline .timeline:nth-child(even):before {
+    transform: rotate(45deg);
+    right: auto;
+    left: 30px;
+}
+
+.Yearly-timeline .timeline:nth-child(even):after {
+    right: auto;
+    left: 0;
+}
+
+.Yearly-timeline .timeline:nth-child(even) .timeline-content {
+    border-radius: 15px 15px 15px 0;
+}
+
+.Yearly-timeline .timeline:nth-child(4n+2):before,
+.Yearly-timeline .timeline:nth-child(4n+2):after {
+    border-color: #ff70a6;
+}
+
+.Yearly-timeline .timeline:nth-child(4n+2) .timeline-content {
+    background: #ff70a6;
+}
+
+.Yearly-timeline .timeline:nth-child(4n+3):before,
+.Yearly-timeline .timeline:nth-child(4n+3):after {
+    border-color: #ff9770;
+}
+
+.Yearly-timeline .timeline:nth-child(4n+3) .timeline-content {
+    background: #ff9770;
+}
+
+.Yearly-timeline .timeline:nth-child(4n+4):before,
+.Yearly-timeline .timeline:nth-child(4n+4):after {
+    border-color: #ffd670;
+}
+
+.Yearly-timeline .timeline:nth-child(4n+4) .timeline-content {
+    background: #ffd670;
+}
+
+@media screen and (max-width:767px) {
+    .Yearly-timeline .timeline {
+        width: 100%;
+        padding: 30px 0 0 30px;
+        margin: 0 0 20px;
+    }
+
+    .Yearly-timeline .timeline:before,
+    .Yearly-timeline .timeline:nth-child(even):before {
+        transform: rotate(-45deg);
+        bottom: auto;
+        top: 0;
+        right: auto;
+        left: 30px;
+    }
+
+    .Yearly-timeline .timeline:after,
+    .Yearly-timeline .timeline:nth-child(even):after {
+        bottom: auto;
+        top: 0;
+        right: auto;
+        left: 0;
+    }
+
+    .Yearly-timeline .timeline-content,
+    .Yearly-timeline .timeline:nth-child(even) .timeline-content {
+        border-radius: 0 15px 15px 15px;
+    }
 }
