@@ -15,7 +15,7 @@ window.onload = (e)=>{
 function loadPage(url){
     window.event.preventDefault();
 
-    fetch("http://localhost:80/jaffio/pages/"+url+".html" /*, options */)
+    fetch("https://mango3313.github.io/jaffio/pages/"+url+".html" /*, options */)
     .then((response) => response.text())
     .then((html) => {
         document.getElementById("bodyContainer").innerHTML = html;
