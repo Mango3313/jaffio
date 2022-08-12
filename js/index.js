@@ -19,6 +19,18 @@ window.onload = (e)=>{
             document.getElementById("bodyContainer").classList.add("animate__animated");
         });
     });
+    document.addEventListener('scroll',(e)=>{
+        var photoDiv = document.querySelector(".header_image");
+        var photo = document.querySelector(".header-photo");
+            if(this.scrollY > 300){
+                photoDiv.style.minHeight = 0+"px";
+                photo.style.minHeight = 0+"px";
+            }
+            else{
+                photoDiv.style.minHeight = 300 - this.scrollY+"px";
+                photoDiv.style.transform = "translate3d(0px,"+300 - this.scrollY+"px,0px);"
+            }
+    });
 };
 
 function loadPage(url){
