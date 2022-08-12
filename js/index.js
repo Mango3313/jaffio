@@ -3,21 +3,15 @@ window.onload = (e)=>{
     loadPage("about");
     document.querySelector("#liAbout").addEventListener("click",(e)=>{
         document.getElementById("bodyContainer").classList.remove("animate__animated");
-        loadPage("about").then(()=>{
-            document.getElementById("bodyContainer").classList.add("animate__animated");
-        });
+        loadPage("about");
     });
     document.querySelector("#liContact").addEventListener("click",(e)=>{
         document.getElementById("bodyContainer").classList.remove("animate__animated");
-        loadPage("contact").then(()=>{
-            document.getElementById("bodyContainer").classList.add("animate__animated");
-        });
+        loadPage("contact");
     });
     document.querySelector("#liProjects").addEventListener("click",(e)=>{
         document.getElementById("bodyContainer").classList.remove("animate__animated");
-        loadPage("projects").then(()=>{
-            document.getElementById("bodyContainer").classList.add("animate__animated");
-        });
+        loadPage("projects");
     });
     document.addEventListener('scroll',(e)=>{
         var photoDiv = document.querySelector(".header_image");
