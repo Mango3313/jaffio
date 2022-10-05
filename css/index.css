@@ -1,5 +1,6 @@
 @import url("./root.css");
 @import url("./cards.css");
+@import url("./contact.css");
 @import url('https://fonts.cdnfonts.com/css/open-sans');
 * {
     margin: 0;
@@ -236,4 +237,18 @@
     min-height: 150px;
     align-self: center;
     border-radius: 50%;
+}
+/*Contact form*/
+.contact{
+    display: flex;
+    flex-direction:column;
+    /*background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);*/
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.contact-content{
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px var(--grayishBlue);
 }
