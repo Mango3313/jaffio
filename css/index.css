@@ -252,3 +252,20 @@
     border-radius: 10px;
     box-shadow: 0px 1px 10px 1px var(--grayishBlue);
 }
+/**/
+.projects-container{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    padding: 15px;
+}
+.projects-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#onprogress_image{
+    width: 40%;
+    height: 50%;
+}
